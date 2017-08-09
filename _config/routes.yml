@@ -1,0 +1,6 @@
+---
+Name: delectus-search-routes
+---
+Director:
+  rules:
+    'delectus-callback/search/$Action!': DelectusSearchCallbackController
