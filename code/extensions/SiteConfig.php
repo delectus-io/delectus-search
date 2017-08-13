@@ -6,14 +6,16 @@
 class DelectusSearchSiteConfigExtension extends DataExtension {
 	const ClientTokenFieldName         = 'DelectusClientToken';
 	const ClientSaltFieldName          = 'DelectusClientSalt';
+	const ClientSecretFieldName        = 'DelectusClientSecret';
 	const SiteIdentifierFieldName      = 'DelectusSiteIdentifier';
 	const TokensInURLFieldName         = 'DelectusTokensInURL';
 	const EncryptionAlgorythmFieldName = 'DelectusEncryptionAlgorythm';
 
 	private static $db = [
-		self::ClientTokenFieldName         => 'Varchar(255)',
-		self::ClientSaltFieldName          => 'Varchar(255)',
-		self::SiteIdentifierFieldName      => 'Varchar(255)',
+		self::ClientTokenFieldName         => DelectusModule::TokenSchema,
+		self::ClientSaltFieldName          => DelectusModule::TokenSchema,
+		self::ClientSecretFieldName        => DelectusModule::TokenSchema,
+		self::SiteIdentifierFieldName      => DelectusModule::TokenSchema,
 		self::EncryptionAlgorythmFieldName => 'Varchar(32)',
 		self::TokensInURLFieldName         => 'Boolean',
 	];
@@ -72,8 +74,8 @@ class DelectusSearchSiteConfigExtension extends DataExtension {
 					'Request Data Encryption Method'
 				),
 				DelectusModule::encryption_options() )
-				->setRightTitle( _t( 'Delectus.EncryptionAlgorythmDescription', "How to encrypt data in requests, only choose No Encryption if over ssl or local testing!" ))
-				->setEmptyString('No encryption (not advised)')
+				->setRightTitle( _t( 'Delectus.EncryptionAlgorythmDescription', "How to encrypt data in requests, only choose No Encryption if over ssl or local testing!" ) )
+				->setEmptyString( 'No encryption (not advised)' ),
 
 		];
 		/** @var \FormField $field */
