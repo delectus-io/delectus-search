@@ -6,9 +6,6 @@ After:
 ContentController:
   extensions:
     - DelectusSearchControllerExtension
-SiteConfig:
-  extensions:
-    - DelectusSearchSiteConfigExtension
 DelectusSearchService:
   module_name: 'delectus-search'
   version: 'v1'
