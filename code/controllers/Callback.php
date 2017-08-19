@@ -13,7 +13,7 @@ class DelectusSearchCallbackController extends DelectusCallbackController {
 	/**
 	 * Return the client from the request (either by auth token or login)
 	 *
-	 * @return \Delectus\Models\Client
+	 * @return \Delectus\Core\Models\Client
 	 */
 	public function currentClient() {
 		// TODO: Implement currentClient() method.
@@ -31,7 +31,7 @@ class DelectusSearchCallbackController extends DelectusCallbackController {
 	/**
 	 * Return the client for the current model (resolve relationships from currentModel to its Client)
 	 *
-	 * @return \Delectus\Models\Client
+	 * @return \Delectus\Core\Models\Client
 	 */
 	public function currentModelClient() {
 		// TODO: Implement currentModelClient() method.
