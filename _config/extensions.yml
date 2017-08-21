@@ -1,0 +1,8 @@
+---
+Name: delectus-search-extensions
+After:
+  - 'delectus/*'
+---
+ContentController:
+  extensions:
+    - DelectusSearchControllerExtension

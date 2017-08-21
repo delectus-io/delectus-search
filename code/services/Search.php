@@ -1,7 +1,5 @@
 <?php
 
-use Delectus\Models\Search;
-
 /**
  * DelectusSearchService calls delectus search service and returns results matched against the local database and augmented with additional
  * meta data and content.
@@ -19,7 +17,8 @@ class DelectusSearchService extends DelectusApiRequestService {
 			] );
 			$model->write();
 
-			$transport = DelectusModule::transport();
+			$transport = DelectusSearchModule::transport();
+
 			$request   = new DelectusApiRequestModel( [
 				'Endpoint' => 'search',
 				'Action'   => 'query',
