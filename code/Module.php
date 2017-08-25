@@ -6,12 +6,12 @@
  */
 class DelectusSearchModule extends DelectusModule {
 
-	private static $module_name = 'delectus-search';
+	const ModuleName = 'delectus-search';
 
 	const Endpoint     = 'search';
 	const ActionSearch = 'search';
 
-	public static function search( $term, $types = self::TypeFile | self::TypePage, &$responseMessage = '' ) {
+	public function search( $term, $types = self::TypeFile | self::TypePage, &$responseMessage = '' ) {
 		$results = new ArrayList();
 
 		try {
@@ -57,6 +57,5 @@ class DelectusSearchModule extends DelectusModule {
 
 		return $results;
 	}
-
 
 }

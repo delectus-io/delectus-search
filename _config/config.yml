@@ -4,8 +4,12 @@ After:
   - 'delectus/*'
 ---
 Injector:
+  DelectusSearchModule:
+    class: DelectusSearchModule
   DelectusSearchService:
     class: DelectusSearchService
+    properties:
+      module: %$DelectusSearchModule
 DelectusSearchModule:
   version: 'v1'
 DelectusTransport:
