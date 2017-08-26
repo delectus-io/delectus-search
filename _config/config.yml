@@ -12,6 +12,5 @@ Injector:
       module: %$DelectusSearchModule
 DelectusSearchModule:
   version: 'v1'
-DelectusTransport:
   endpoints:
     search: 'https://api.delectus.io/'
