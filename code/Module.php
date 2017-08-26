@@ -5,11 +5,11 @@
  * and by other code on the site.
  */
 class DelectusSearchModule extends DelectusModule {
-	const ModuleName   = 'delectus-search';
+	const ModuleName = 'delectus-search';
 	const Endpoint     = 'search';
 	const ActionSearch = 'search';
 
-	public static function search( $term, $types = self::TypeFile | self::TypePage, &$responseMessage = '' ) {
+	public function search( $term, $types = self::TypeFile | self::TypePage, &$responseMessage = '' ) {
 		$results = new ArrayList();
 
 		try {

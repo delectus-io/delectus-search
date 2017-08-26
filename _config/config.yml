@@ -3,13 +3,15 @@ Name: delectus-search-config
 After:
   - 'delectus/*'
 ---
+Injector:
+  DelectusSearchModule:
+    class: DelectusSearchModule
+  DelectusSearchService:
+    class: DelectusSearchService
+    properties:
+      module: %$DelectusSearchModule
 DelectusSearchModule:
   version: 'v1'
-#  client_token: ''     these should be set in your website config yaml or can be set in CMS settings tab
-#  client_salt: ''
-#  site_identifier: ''
-DelectusSearchService:
-  module_name: 'delectus-search'
 DelectusTransport:
   endpoints:
     search: 'https://api.delectus.io/'
