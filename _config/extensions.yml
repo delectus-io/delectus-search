@@ -6,3 +6,9 @@ After:
 ContentController:
   extensions:
     - DelectusSearchControllerExtension
+# SiteTree:
+# extensions:
+#    - DelectusSearchPageExtension
+#File:
+#  extensions:
+#    - DelectusSearchFileExtension
