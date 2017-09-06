@@ -7,30 +7,10 @@
 class DelectusSearchService extends DelectusApiRequestService {
 	const Endpoint = 'search';
 	const SearchAction = 'search';
+	const ApiRequestClassName = DelectusSearchApiRequestModel::class;
 
 	public function search( $terms ) {
-		$models = new ArrayList();
-
-		if ( ! $model = DelectusSearchModel::get()->find( 'Hash', DelectusSearchModel::hash( $terms ) ) ) {
-			$model = DelectusSearchModel::create( [
-				'Terms' => $terms,
-			] );
-			$model->write();
-
-			$transport = DelectusSearchModule::transport();
-
-			$request   = new DelectusApiRequestModel( [
-				'Endpoint' => 'search',
-				'Action'   => 'query',
-			] );
-
-			$request->setModel( $model );
-
-			// response will be
-			$response = $transport->makeRequest( $request );
-
-
-		}
+		$requestClassName = static::ApiRequestClassName;
 
 	}
 }
