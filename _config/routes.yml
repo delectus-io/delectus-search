@@ -3,4 +3,4 @@ Name: delectus-search-routes
 ---
 Director:
   rules:
-    'delectus/$Version!/$Action!': DelectusSearchCallbackController
+    'delectus-callback/search/$Version!/$Action!': DelectusSearchCallbackController
